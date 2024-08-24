@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "keyboard_parts")(type "KiCad")(uri "C:/Users/corey/projects/cwill_keyboard/pcb/kicad_lib_tmk/keyboard_parts.kicad_sym")(options "")(descr ""))
+  (lib (name "pi")(type "KiCad")(uri "C:/Users/corey/projects/cwill_keyboard/pcb/VGA-PicoW-KiCAD/RPi_Pico.kicad_sym")(options "")(descr ""))
+)

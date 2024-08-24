@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cmake.launchBehavior": "breakAndReuseTerminal",
+		"vim.handleKeys": {
+			"<C-p>": false
+		}
+	}
+}
