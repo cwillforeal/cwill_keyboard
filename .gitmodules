@@ -10,3 +10,6 @@
 [submodule "submodules/lorawan-library-for-pico"]
 	path = submodules/lorawan-library-for-pico
 	url = https://github.com/ArmDeveloperEcosystem/lorawan-library-for-pico.git
+[submodule "submodules/Pico_WS2812_c"]
+	path = submodules/Pico_WS2812_c
+	url = https://github.com/cwillforeal/Pico_WS2812_c.git
