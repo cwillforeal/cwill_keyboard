@@ -1,6 +1,6 @@
 {
     "name": "Rpi Pico",
-    "image": "lukstep/raspberry-pi-pico-sdk:v0.0.2",
+    "image": "lukstep/raspberry-pi-pico-sdk:latest",
     "customizations": {
         "vscode": {
             "settings": {},
