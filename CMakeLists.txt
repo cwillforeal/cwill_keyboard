@@ -26,6 +26,12 @@ add_executable(${CMAKE_PROJECT_NAME}
     src/hid_keyboard_demo.c
 )
 
+# Defines For project
+target_compile_definitions(${CMAKE_PROJECT_NAME}
+    PRIVATE
+        PICO_FLASH_ASSUME_CORE1_SAFE=1 # ONLY define if using single core
+)
+
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
     ${CMAKE_CURRENT_LIST_DIR}/src/
@@ -40,8 +46,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     pico_btstack_classic
     pico_btstack_cyw43
     pico_cyw43_arch_none
-    # FreeRTOS-Kernel
-    # FreeRTOS-Kernel-Heap4
+    pico_async_context_freertos
+    FreeRTOS-Kernel-Heap4
 )
 # Export path to project executable to file. File is used in vscode tasks (task.json and launch.json)
 set(ELF_PATH "${CMAKE_CURRENT_BINARY_DIR}/${TARGET_FILE}${CMAKE_PROJECT_NAME}.elf")
