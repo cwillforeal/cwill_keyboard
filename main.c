@@ -3,12 +3,13 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-#include "keyboard_tasks.h"
+#include "tasks.h"
 #include "pico/cyw43_arch.h"
 #include "pico/stdlib.h"
 #include "btstack_run_loop.h"
 #include "hardware/uart.h"
 #include "tusb.h"
+#include "config.h"
 
 int btstack_main(int argc, const char* argv[]);
 
@@ -20,6 +21,7 @@ void vApplicationMallocFailedHook(void)
 {
 }
 
+// TODO: Create BLE module
 static void task_ble(void* pv)
 {
 	if(cyw43_arch_init())
@@ -56,6 +58,8 @@ int main()
 	{
 		sleep_ms(100);
 	};
+	// Initalize the modules
 	main_ble_setup();
+	task_led_init(CONFIG_LED_PIN, CONFIG_KEY_COUNT);
 	vTaskStartScheduler();
 }
